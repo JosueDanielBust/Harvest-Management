@@ -1,0 +1,11 @@
+# System Files
+.DS_Store
+*/.DS_Store
+
+# Modules and Caches
+node_modules/
+.sass-cache/
+
+# Environment Files
+.env
+.env.prod

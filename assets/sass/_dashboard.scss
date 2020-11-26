@@ -1,0 +1,90 @@
+$ul: 'users-list';
+
+section#dashboard {
+  margin: 5rem auto 2rem;
+  max-width: 800px;
+  text-align: center;
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    margin: 2rem 0 1rem;
+    a.button {
+      margin: 0 1rem;
+    }
+  }
+
+  > p {
+    span {
+      color: $color-3;
+      font-weight: bold;
+    }
+  }
+
+  .#{ $ul } {
+    h3 {
+      color: $color-3;
+      font-size: 1.2rem;
+    }
+    .#{ $ul }-contents {
+      border: 2px solid $color-1;
+      margin: 1rem 0;
+      padding-top: 1rem;
+      > div {
+        padding: 1rem;
+      }
+      > div:nth-child(2n+1) {
+        background-color: rgba( $color-3, 0.1 );
+      }
+      &__header {
+        display: flex;
+        flex-direction: row;
+        margin: 0.5rem 0;
+        > p {
+          flex: 0 0 50%;
+          &:first-of-type {
+            color: $color-1;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: left;
+          }
+          &:last-of-type {
+            text-align: right;
+            a {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+      &__edit {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        &.active {
+          border: 2px solid $color-1;
+          padding: 1rem;
+          margin: 1rem 0;
+          max-height: 1000px;
+        }
+        > div {
+          margin: 0.5rem 0;
+          label {
+            text-align: left;
+          }
+        }
+      }
+    }
+    .#{ $ul }-add {
+      margin-top: 5rem;
+      padding: 1rem;
+      border: 2px solid $color-1;
+      > div {
+        margin: 0.5rem 0;
+        label {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

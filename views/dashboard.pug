@@ -1,0 +1,17 @@
+doctype html
+html( lang="en" )
+  head
+    title Dashboard - Harvest Manager
+    meta( charset='UTF-8' )
+    meta( name='viewport' content='width=device-width, initial-scale=1.0' )
+    meta( http-equiv='X-UA-Compatible' content='ie=edge' )
+    link( rel="stylesheet", href='/assets/css/main.css' )
+
+  body
+    section#dashboard
+      include includes/logged-header.pug
+      .buttons
+        if user.rol == 1
+          a.button(href="/dashboard/users/") Users
+        a.button(href="/dashboard/crops/") Crops
+        a.button(href="/dashboard/plantations/") Plantations

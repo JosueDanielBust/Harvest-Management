@@ -1,0 +1,15 @@
+section#home {
+  margin: 5rem auto 2rem;
+  max-width: 800px;
+  text-align: center;
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    margin: 1rem 0;
+    a.button {
+      margin: 0 1rem;
+    }
+  }
+}

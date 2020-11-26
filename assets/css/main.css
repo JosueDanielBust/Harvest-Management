@@ -1,0 +1,58 @@
+/* Color Theme Swatches in RGBA */
+body { color: #1f1f1f; font-family: Verdana, Geneva, sans-serif; font-size: 14px; margin: 0; padding: 0; }
+
+p, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+
+a { color: #5a7202; }
+a:hover { color: #bf8756; }
+
+h1 { color: #5a7202; font-size: 2.5rem; margin: 0rem 0; }
+
+h2 { color: #5a7202; font-size: 1.5rem; margin: 0rem 0; }
+
+label { display: block; width: 100%; }
+
+input { border: 1px solid #5a7202; border-radius: 5px; box-sizing: border-box; display: block; padding: 0.5rem 1rem; width: 100%; transition: 0.3s ease-in; }
+input:focus { border-color: #93a50d; }
+
+button, .button { background-color: #5a7202; border: 2px solid #5a7202; border-radius: 5px; color: #ffffff; font-size: 1rem; padding: 0.5rem 4rem; text-transform: uppercase; transition: 0.3s ease-in-out; cursor: pointer; }
+button:hover, .button:hover { background-color: #ffffff; border-color: #93a50d; color: #93a50d; }
+
+a.button { text-decoration: none; }
+
+section#home { margin: 5rem auto 2rem; max-width: 800px; text-align: center; }
+section#home h1 { margin-bottom: 2rem; }
+section#home .buttons { margin: 1rem 0; }
+section#home .buttons a.button { margin: 0 1rem; }
+
+.login-form { max-width: 400px; margin: 0 auto; margin-top: 20vh; }
+.login-form h1, .login-form h2 { text-align: center; }
+.login-form form { margin: 0 auto; }
+.login-form .form-control { margin-bottom: 1rem; }
+.login-form .form-messages { display: none; background-color: #93a50d; border: 1px solid #5a7202; color: #5a7202; text-align: center; transition: 0.2s ease-in-out; }
+.login-form .form-messages p { margin: 1rem; }
+
+@media screen and (max-width: 400px) { .login-form { margin-top: 1rem; } }
+section#dashboard { margin: 5rem auto 2rem; max-width: 800px; text-align: center; }
+section#dashboard h1 { margin-bottom: 2rem; }
+section#dashboard .buttons { margin: 2rem 0 1rem; }
+section#dashboard .buttons a.button { margin: 0 1rem; }
+section#dashboard > p span { color: #bf8756; font-weight: bold; }
+section#dashboard .users-list h3 { color: #bf8756; font-size: 1.2rem; }
+section#dashboard .users-list .users-list-contents { border: 2px solid #5a7202; margin: 1rem 0; padding-top: 1rem; }
+section#dashboard .users-list .users-list-contents > div { padding: 1rem; }
+section#dashboard .users-list .users-list-contents > div:nth-child(2n+1) { background-color: rgba(191, 135, 86, 0.1); }
+section#dashboard .users-list .users-list-contents__header { display: flex; flex-direction: row; margin: 0.5rem 0; }
+section#dashboard .users-list .users-list-contents__header > p { flex: 0 0 50%; }
+section#dashboard .users-list .users-list-contents__header > p:first-of-type { color: #5a7202; font-size: 1rem; font-weight: bold; text-align: left; }
+section#dashboard .users-list .users-list-contents__header > p:last-of-type { text-align: right; }
+section#dashboard .users-list .users-list-contents__header > p:last-of-type a { margin-left: 1rem; }
+section#dashboard .users-list .users-list-contents__edit { max-height: 0; overflow: hidden; transition: 0.2s ease-in-out; }
+section#dashboard .users-list .users-list-contents__edit.active { border: 2px solid #5a7202; padding: 1rem; margin: 1rem 0; max-height: 1000px; }
+section#dashboard .users-list .users-list-contents__edit > div { margin: 0.5rem 0; }
+section#dashboard .users-list .users-list-contents__edit > div label { text-align: left; }
+section#dashboard .users-list .users-list-add { margin-top: 5rem; padding: 1rem; border: 2px solid #5a7202; }
+section#dashboard .users-list .users-list-add > div { margin: 0.5rem 0; }
+section#dashboard .users-list .users-list-add > div label { text-align: left; }
+
+/*# sourceMappingURL=main.css.map */

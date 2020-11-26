@@ -1,0 +1,7 @@
+h1 Harvest Manager
+p You're logged in as 
+  span #{ user.name } 
+  if user.rol == 1
+    span [Admin]
+  if user.rol == 2
+    span [User]

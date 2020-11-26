@@ -1,0 +1,51 @@
+doctype html
+html( lang="en" )
+  head
+    title Users - Harvest Manager
+    meta( charset='UTF-8' )
+    meta( name='viewport' content='width=device-width, initial-scale=1.0' )
+    meta( http-equiv='X-UA-Compatible' content='ie=edge' )
+    link( rel="stylesheet", href='/assets/css/main.css' )
+
+  body
+    section#dashboard
+      include includes/logged-header.pug
+
+      div.users-list
+        div.users-list-contents
+          h3 Your users accounts
+          div( v-for='u in users' v-bind:key='u.id' )
+            div.users-list-contents__header
+              p {{ u.name }}
+              p
+                a.users-list-contents__actions__edit( href='#' onClick='toogleEditUser( this )' ) [ Edit User ]
+                a.users-list-contents__actions__edit( href='#' v-on:click='removeUser( u.id )' ) [ Remove User ]
+            div.users-list-contents__edit
+              div
+                label User Name
+                input( type='text' v-model='u.name' )
+              div
+                label User Email
+                input( type='text' v-model='u.email' )
+              div
+                label User Password
+                input( type='password' v-model='u.password' placeholder='Leave this empty if you don\'t want to update the password' )
+              button.button( v-on:click='editUser( u )' ) Update User
+
+        div.users-list-add
+          div
+            h3 Add New User for this account
+          div
+            label( for='username' ) Name
+            input( type='text' name='username' id='username' v-model='username' placeholder='User Name' )
+          div
+            label( for='useremail' ) Email
+            input( type='text' name='useremail' id='useremail' v-model='useremail' placeholder='User Email' )
+          div
+            label( for='userpassword' ) Password
+            input( type='password' name='userpassword' id='userpassword' v-model='userpassword' placeholder='Password' )
+          button.button( v-on:click='createUser( username, useremail, userpassword )' ) Create Link
+
+
+    script( src='/assets/js/vue.js' )
+    script( src='/assets/js/users.js' )

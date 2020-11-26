@@ -1,0 +1,30 @@
+doctype html
+html( lang="en" )
+  head
+    title Register - Harvest Manager
+    meta( charset='UTF-8' )
+    meta( name='viewport' content='width=device-width, initial-scale=1.0' )
+    meta( http-equiv='X-UA-Compatible' content='ie=edge' )
+    link( rel="stylesheet", href='/assets/css/main.css' )
+
+  body
+    #register
+      .login-form
+        h1 Harvest Manager
+        form( v-on:submit='registerForm' )
+          .form-control
+            label( for='user-name' ) Name
+            input( value=name type='text' name='user-name' id='user-name' placeholder='Your Name' )
+          .form-control
+            label( for='user-email' ) Email
+            input( value=email type='text' name='user-email' id='user-email' placeholder='Your Email' )
+          .form-control
+            label( for='user-password' ) Password
+            input( value=password type='password' name='user-password' id='user-password' placeholder='Password' )
+          .form-control
+            button Register
+        .form-messages
+          p {{ error }}
+
+    script( src='/assets/js/vue.js' )
+    script( src='/assets/js/register.js' )

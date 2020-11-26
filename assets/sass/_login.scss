@@ -1,0 +1,31 @@
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  h1, h2 {
+    text-align: center;
+  }
+  form {
+    margin: 0 auto;
+  }
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  .form-messages {
+    display: none;
+    background-color: $color-2;
+    border: 1px solid $color-1;
+    color: $color-1;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    p {
+      margin: 1rem;
+    }
+  }
+}
+
+@media screen and ( max-width: 400px ) {
+  .login-form {
+    margin-top: 1rem;
+  }
+}
