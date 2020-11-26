@@ -18,6 +18,22 @@ module.exports = {
       });
     });
   },
+  getUserType: async function(req, res) {
+    validate_token( req, res, async function( decoded ) {
+      sql.begin( async sql => {
+        let db_data = ( await sql`
+          select rol from users where id = ${ req.params.id }
+        `);
+        return [ db_data ];
+      }).then(( [ db_data ] ) => {
+        if ( db_data[0].rol == 1 ) {
+          res.send( { error: false, data: { rol: db_data[0].rol, rolString: 'admin', } } );
+        } else {
+          res.send( { error: false, data: { rol: db_data[0].rol, rolString: 'subuser', } } );
+        }
+      });
+    });
+  },
   updateUserPassword: async function(req, res) {
     validate_token( req, res, async function( decoded ) {
       sql.begin( async sql => {

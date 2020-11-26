@@ -68,6 +68,7 @@ app.get('/api/v1/subusers/', users.getUserAccounts);
 app.delete('/api/v1/users/:id', users.removeUser);
 app.put('/api/v1/users/details/:id', users.updateUserDetails);
 app.put('/api/v1/users/password/:id', users.updateUserPassword);
+app.get('/api/v1/user/type/:id', users.getUserType);
 //#endregion
 
 //#region 404 Error
